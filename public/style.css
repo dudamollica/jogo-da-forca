@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.jogo {
+    display: flex;
+    height: 440px;
+}
+
+.jogo div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forcaImg {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.jogo button {
+    width: 200px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #27AE60;
+    color: #ffffff;
+    border-radius: 8px;
+    border-color: #27AE60;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.jogo ul {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.jogo ul li {
+    width: 50px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.underline {
+    background-color: black;
+    width: 100%;
+    height: 5px;
+    display: flex;
+}
+
+.letra {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+}
+.letra-escondida{
+    opacity: 0;
+}
+
+.letras {
+    display: flex;
+    justify-content: center;
+}
+
+.letras div {
+    margin-top: 10px;
+    width: 676px;
+}
+
+.letras button {
+    width: 40px;
+    height: 40px;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    color: #39739D;
+    margin-right: 12px;
+    margin-bottom: 11px;
+}
+
+.letras button:hover {
+    background-color: #7AA7C7;
+}
+
+
+.escondido {
+    display: none;
+}
