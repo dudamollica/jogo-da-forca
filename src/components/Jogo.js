@@ -3,14 +3,6 @@ import React from "react"
 import Palavra from "./Palavra.js"
 
 export default function Jogo(props) {
-// const [palavra, setPalavra]= React.useState([])
-//     function embaralharPalvras() {
-//         function comparador() {
-//             return (Math.random() - 0.5)
-//         }
-//     props.palavras.sort(comparador)
-//     setPalavra(props.palavras[0].split(''))
-//     }
 
     const imagem = [
         {
@@ -54,7 +46,8 @@ export default function Jogo(props) {
                 <div className="botao-e-palavra">
                 <button onClick={props.embaralharPalavras}>Escolher Palavra</button>
                 <ul>
-                {props.palavra.map((l, index)=><Palavra letra={l} key={index}/>)}
+                {props.palavra.map((l, index)=><Palavra letrasClicadas={props.letrasClicadas} 
+                letra={l} key={index}/>)}
                 </ul>
                 </div>
             </div>

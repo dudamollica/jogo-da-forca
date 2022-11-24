@@ -6,6 +6,7 @@ import palavras from "./palavras.js"
 
 export default function App() {
  const [palavra, setPalavra]= React.useState([])
+ console.log(palavra)
     function embaralharPalavras() {
         function comparador() {
             return (Math.random() - 0.5)
@@ -14,13 +15,12 @@ export default function App() {
     setPalavra(palavras[0].split(''))
     }
 
- //const letraClicada que ta nas Letras para o Jogo, para saber se acertou ou errou
-
+const [letrasClicadas, setLetrasClicadas] = React.useState([])
 
   return (
   <>
-  <Jogo palavra={palavra} embaralharPalavras={embaralharPalavras}/>
-  <Letras palavra={palavra}/>
+  <Jogo letrasClicadas={letrasClicadas} palavra={palavra} embaralharPalavras={embaralharPalavras}/>
+  <Letras letrasClicadas={letrasClicadas} setLetrasClicadas={setLetrasClicadas} palavra={palavra}/>
   <Chute/>
   </>
   );

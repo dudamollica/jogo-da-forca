@@ -56,26 +56,10 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.underline {
-    background-color: black;
-    width: 100%;
-    height: 5px;
-    display: flex;
-}
-
-.letra {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
-}
-.letra-escondida{
-    opacity: 0;
 }
 
 .letras {
@@ -98,18 +82,14 @@ button:hover {
     margin-right: 12px;
     margin-bottom: 11px;
 }
-.botao-desabilitado{
-    background-color: #7AA7C7;
-}
 
-.teste{
-    background-color: yellow;
+.botao-desabilitado {
+    background-color: #7AA7C7;
 }
 
 .letras-botao:hover {
     background-color: #7AA7C7;
 }
-
 
 .escondido {
     display: none;

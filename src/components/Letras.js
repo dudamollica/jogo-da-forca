@@ -4,14 +4,14 @@ import Letra from "./Letra"
 export default function Letras(props) {
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-    const [letrasClicadas, setLetrasClicadas] = React.useState([])
-    console.log(letrasClicadas)
+    
+    console.log(props.letrasClicadas)
 
     function letraEscolhida(letraEscolhida) {
         if(props.palavra!=""){
-        if(!letrasClicadas.includes(letraEscolhida)){
-        const novoArray = [...letrasClicadas, letraEscolhida]
-        setLetrasClicadas(novoArray)
+        if(!props.letrasClicadas.includes(letraEscolhida)){
+        const novoArray = [...props.letrasClicadas, letraEscolhida]
+        props.setLetrasClicadas(novoArray)
         }
         }
     }
@@ -21,7 +21,7 @@ export default function Letras(props) {
             <div>
                 {alfabeto.map((l) => <Letra
                     palavra={props.palavra}
-                    letrasClicadas={letrasClicadas}
+                    letrasClicadas={props.letrasClicadas}
                     onclick={letraEscolhida}
                     letra={l} key={l} />)}
             </div>
