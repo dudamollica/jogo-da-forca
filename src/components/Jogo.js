@@ -6,34 +6,34 @@ export default function Jogo(props) {
 
     const imagem = [
         {
-            classe: "forcaImg forca-zero",
+            classe: `forcaImg forca-zero ${props.erros==0?"":"escondido"} `,
             imagem: "assets/forca0.png"
         },
 
         {
-            classe: "forcaImg forca-um escondido",
+            classe: `forcaImg forca-um ${props.erros==1?"":"escondido"}`,
             imagem: "assets/forca1.png"
         },
 
         {
-            classe: "forcaImg forca-dois escondido",
+            classe: `forcaImg forca-dois ${props.erros==2?"":"escondido"}`,
             imagem: "assets/forca2.png"
         },
 
         {
-            classe: "forcaImg forca-tres escondido",
+            classe: `forcaImg forca-tres ${props.erros==3?"":"escondido"}`,
             imagem: "assets/forca3.png"
         },
         {
-            classe: "forcaImg forca-quatro escondido",
+            classe: `forcaImg forca-quatro ${props.erros==4?"":"escondido"}`,
             imagem: "assets/forca4.png"
         },
         {
-            classe: "forcaImg forca-cinco escondido",
+            classe: `forcaImg forca-cinco ${props.erros==5?"":"escondido"}`,
             imagem: "assets/forca5.png"
         },
         {
-            classe: "forcaImg forca-seis escondido",
+            classe: `forcaImg forca-seis ${props.erros==6?"":"escondido"}`,
             imagem: "assets/forca6.png"
         }
     ]
@@ -46,7 +46,8 @@ export default function Jogo(props) {
                 <div className="botao-e-palavra">
                 <button onClick={props.embaralharPalavras}>Escolher Palavra</button>
                 <ul>
-                {props.palavra.map((l, index)=><Palavra letrasClicadas={props.letrasClicadas} 
+                {props.palavra.map((l, index)=><Palavra letrasClicadas={props.letrasClicadas}
+                erros={props.erros} 
                 letra={l} key={index}/>)}
                 </ul>
                 </div>
