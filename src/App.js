@@ -7,14 +7,22 @@ import palavras from "./palavras.js"
 export default function App() {
  // const Palavra que ta no Jogo para desabilitar e habilitar botoes no inicio,
  // passar ela para as Letras.
+ const [palavra, setPalavra]= React.useState([])
+    function embaralharPalvras() {
+        function comparador() {
+            return (Math.random() - 0.5)
+        }
+    palavras.sort(comparador)
+    setPalavra(palavras[0].split(''))
+    }
 
  //const letraClicada que ta nas Letras para o Jogo, para saber se acertou ou errou
 
 
   return (
   <>
-  <Jogo palavras={palavras}/>
-  <Letras/>
+  <Jogo palavra={palavra} embaralharPalvras={embaralharPalvras}/>
+  <Letras palavra={palavra}/>
   <Chute/>
   </>
   );

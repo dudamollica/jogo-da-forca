@@ -3,14 +3,14 @@ import React from "react"
 import Palavra from "./Palavra.js"
 
 export default function Jogo(props) {
-const [palavra, setPalavra]= React.useState([])
-    function embaralharPalvras() {
-        function comparador() {
-            return (Math.random() - 0.5)
-        }
-    props.palavras.sort(comparador)
-    setPalavra(props.palavras[0].split(''))
-    }
+// const [palavra, setPalavra]= React.useState([])
+//     function embaralharPalvras() {
+//         function comparador() {
+//             return (Math.random() - 0.5)
+//         }
+//     props.palavras.sort(comparador)
+//     setPalavra(props.palavras[0].split(''))
+//     }
 
     const imagem = [
         {
@@ -52,9 +52,9 @@ const [palavra, setPalavra]= React.useState([])
                 {imagem.map((i) => <Forca classe={i.classe} img={i.imagem} key={i.imagem} />)}
                 </div>
                 <div className="botao-e-palavra">
-                <button onClick={embaralharPalvras}>Escolher Palavra</button>
+                <button onClick={props.embaralharPalvras}>Escolher Palavra</button>
                 <ul>
-                {palavra.map((l, index)=><Palavra letra={l} key={index}/>)}
+                {props.palavra.map((l, index)=><Palavra letra={l} key={index}/>)}
                 </ul>
                 </div>
             </div>

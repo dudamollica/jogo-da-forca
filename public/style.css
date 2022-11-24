@@ -9,6 +9,7 @@ button:hover {
 .jogo {
     display: flex;
     height: 440px;
+    position: relative;
 }
 
 .jogo div {
@@ -21,8 +22,9 @@ button:hover {
 .forcaImg {
     width: 400px;
     height: 400px;
-    margin-top: 30px;
-    margin-left: 50px;
+    top: 30px;
+    left: 50px;
+    position: absolute;
 }
 
 .jogo button {
@@ -98,6 +100,10 @@ button:hover {
 }
 .botao-desabilitado{
     background-color: #7AA7C7;
+}
+
+.teste{
+    background-color: yellow;
 }
 
 .letras-botao:hover {
