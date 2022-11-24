@@ -86,7 +86,7 @@ button:hover {
     width: 676px;
 }
 
-.letras button {
+.letras-botao {
     width: 40px;
     height: 40px;
     background: #E1ECF4;
@@ -96,8 +96,11 @@ button:hover {
     margin-right: 12px;
     margin-bottom: 11px;
 }
+.botao-desabilitado{
+    background-color: #7AA7C7;
+}
 
-.letras button:hover {
+.letras-botao:hover {
     background-color: #7AA7C7;
 }
 

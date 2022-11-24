@@ -48,13 +48,13 @@ const [palavra, setPalavra]= React.useState([])
     return (
         < >
             <div className="jogo">
-                <div>
+                <div className="forca">
                 {imagem.map((i) => <Forca classe={i.classe} img={i.imagem} key={i.imagem} />)}
                 </div>
-                <div>
+                <div className="botao-e-palavra">
                 <button onClick={embaralharPalvras}>Escolher Palavra</button>
                 <ul>
-                {palavra.map((l)=><Palavra letra={l}/>)}
+                {palavra.map((l, index)=><Palavra letra={l} key={index}/>)}
                 </ul>
                 </div>
             </div>
