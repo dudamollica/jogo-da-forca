@@ -5,10 +5,8 @@ import Letras from "./components/Letras.js"
 import palavras from "./palavras.js"
 
 export default function App() {
- // const Palavra que ta no Jogo para desabilitar e habilitar botoes no inicio,
- // passar ela para as Letras.
  const [palavra, setPalavra]= React.useState([])
-    function embaralharPalvras() {
+    function embaralharPalavras() {
         function comparador() {
             return (Math.random() - 0.5)
         }
@@ -21,7 +19,7 @@ export default function App() {
 
   return (
   <>
-  <Jogo palavra={palavra} embaralharPalvras={embaralharPalvras}/>
+  <Jogo palavra={palavra} embaralharPalavras={embaralharPalavras}/>
   <Letras palavra={palavra}/>
   <Chute/>
   </>

@@ -52,7 +52,7 @@ export default function Jogo(props) {
                 {imagem.map((i) => <Forca classe={i.classe} img={i.imagem} key={i.imagem} />)}
                 </div>
                 <div className="botao-e-palavra">
-                <button onClick={props.embaralharPalvras}>Escolher Palavra</button>
+                <button onClick={props.embaralharPalavras}>Escolher Palavra</button>
                 <ul>
                 {props.palavra.map((l, index)=><Palavra letra={l} key={index}/>)}
                 </ul>
