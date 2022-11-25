@@ -46,7 +46,9 @@ export default function Jogo(props) {
                 <div className="botao-e-palavra">
                 <button onClick={props.embaralharPalavras}>Escolher Palavra</button>
                 <ul>
-                {props.palavra.map((l, index)=><Palavra letrasClicadas={props.letrasClicadas}
+                {props.palavra.map((l, index)=><Palavra palavra={props.palavra}
+                acertos={props.acertos}
+                letrasClicadas={props.letrasClicadas}
                 erros={props.erros} 
                 letra={l} key={index}/>)}
                 </ul>

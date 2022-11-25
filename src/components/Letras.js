@@ -7,13 +7,16 @@ export default function Letras(props) {
 
     function letraEscolhida(letraEscolhida) {
         if(props.palavra!=""){
-        if(!props.letrasClicadas.includes(letraEscolhida)){
-        const novoArray = [...props.letrasClicadas, letraEscolhida]
-        props.setLetrasClicadas(novoArray)
+        if (!props.letrasClicadas.includes(letraEscolhida)) {
+            const novoArray = [...props.letrasClicadas, letraEscolhida]
+            props.setLetrasClicadas(novoArray)
         }
-        if(!props.palavra.includes(letraEscolhida)){
-        props.setErros(props.erros+1)
-        }
+        const vezesLetraRepete = props.palavra.filter((l) => letraEscolhida == l)
+        if (!props.palavra.includes(letraEscolhida)) {
+            props.setErros(props.erros + 1)
+        } else {
+            props.setAcertos(props.acertos + (1 * vezesLetraRepete.length))
+            }
         }
     }
 
@@ -21,6 +24,7 @@ export default function Letras(props) {
         <div className="letras">
             <div>
                 {alfabeto.map((l) => <Letra
+                    acertos={props.acertos}
                     palavra={props.palavra}
                     erros={props.erros}
                     letrasClicadas={props.letrasClicadas}

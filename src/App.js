@@ -10,6 +10,8 @@ export default function App() {
     const [letrasClicadas, setLetrasClicadas] = React.useState([])
     console.log(letrasClicadas)
     const [erros, setErros] = React.useState(0)
+    const [acertos, setAcertos] = React.useState(0)
+    console.log("acertos "+acertos)
 
 
     function embaralharPalavras() {
@@ -21,6 +23,7 @@ export default function App() {
         if (palavra != "") {
             setErros(0)
             setLetrasClicadas([])
+            setAcertos(0)
         }
     }
 
@@ -30,12 +33,15 @@ export default function App() {
                 palavra={palavra}
                 embaralharPalavras={embaralharPalavras}
                 erros={erros}
+                acertos={acertos}
             />
             <Letras letrasClicadas={letrasClicadas}
                 setLetrasClicadas={setLetrasClicadas}
                 palavra={palavra}
                 erros={erros}
-                setErros={setErros} />
+                setErros={setErros} 
+                acertos={acertos}
+                setAcertos={setAcertos}/>
             <Chute />
         </>
     );
