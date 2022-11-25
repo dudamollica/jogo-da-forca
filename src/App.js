@@ -11,8 +11,7 @@ export default function App() {
     console.log(letrasClicadas)
     const [erros, setErros] = React.useState(0)
     const [acertos, setAcertos] = React.useState(0)
-    console.log("acertos "+acertos)
-
+    const [textoInput, setTextoInput] = React.useState("")
 
     function embaralharPalavras() {
         function comparador() {
@@ -24,6 +23,7 @@ export default function App() {
             setErros(0)
             setLetrasClicadas([])
             setAcertos(0)
+            setTextoInput("")
         }
     }
 
@@ -39,10 +39,18 @@ export default function App() {
                 setLetrasClicadas={setLetrasClicadas}
                 palavra={palavra}
                 erros={erros}
-                setErros={setErros} 
+                setErros={setErros}
                 acertos={acertos}
-                setAcertos={setAcertos}/>
-            <Chute />
+                setAcertos={setAcertos} />
+            <Chute
+                textoInput={textoInput}
+                setTextoInput={setTextoInput}
+                palavra={palavra}
+                setAcertos={setAcertos}
+                acertos={acertos}
+                setErros={setErros}
+                erros={erros}
+            />
         </>
     );
 }

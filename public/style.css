@@ -61,11 +61,13 @@ button:hover {
     font-weight: 700;
     font-size: 50px;
 }
-.palavra-errada{
-    color:red;
+
+.palavra-errada {
+    color: red;
 }
-.palavra-certa{
-    color:green;
+
+.palavra-certa {
+    color: green;
 }
 
 .letras {
@@ -90,10 +92,62 @@ button:hover {
 }
 
 .botao-desabilitado {
-    background-color: #7AA7C7;
+    background-color: #798A9F;
+    ;
 }
 
 .letras-botao:hover {
+    background-color: #7AA7C7;
+}
+
+.chute {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chute span {
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+
+.chute input {
+    width: 353px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    margin-right: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    padding-left:10px ;
+}
+
+.chute button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    color: #3C76A1;
+    width: 100px;
+    height: 40px;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}
+.chute button:hover{
     background-color: #7AA7C7;
 }
 

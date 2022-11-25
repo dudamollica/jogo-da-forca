@@ -3,7 +3,7 @@ import React from "react";
 export default function Letra(props){
 
    return( 
-<button onClick={()=>props.onclick(props.letra)}
+<button onClick={()=>props.onclick(props.letra)} data-test="letter"
 
 className={`letras-botao
 ${props.letrasClicadas.includes(props.letra)?"botao-desabilitado":""}
