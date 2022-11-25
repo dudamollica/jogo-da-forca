@@ -47,7 +47,7 @@ export default function Jogo(props) {
                 <div className="botao-e-palavra">
                     <button onClick={props.embaralharPalavras}
                         data-test="choose-word">Escolher Palavra</button>
-                    <ul data-test="word" data-answer={props.palavra}>
+                    <ul data-test="word" data-answer={props.palavra.join("")}>
                         {props.palavra.map((l, index) => <Palavra palavra={props.palavra}
                             acertos={props.acertos}
                             letrasClicadas={props.letrasClicadas}
