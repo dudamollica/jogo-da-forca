@@ -6,7 +6,7 @@ export default function Jogo(props) {
 
     const imagem = [
         {
-            classe: `forcaImg forca-zero ${props.erros==0?"":"escondido"} `,
+            classe: `forcaImg forca-zero ${props.erros==0?"":"escondido"}`,
             imagem: "assets/forca0.png"
         },
 
