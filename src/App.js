@@ -6,9 +6,7 @@ import palavras from "./palavras.js"
 
 export default function App() {
     const [palavra, setPalavra] = React.useState([])
-    console.log(palavra)
     const [letrasClicadas, setLetrasClicadas] = React.useState([])
-    console.log(letrasClicadas)
     const [erros, setErros] = React.useState(0)
     const [acertos, setAcertos] = React.useState(0)
     const [textoInput, setTextoInput] = React.useState("")

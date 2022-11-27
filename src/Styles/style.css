@@ -12,8 +12,9 @@ button:hover {
     position: relative;
 }
 
-.jogo div {
+.botao-e-palavra{
     width: 50%;
+    margin-left: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,6 +47,44 @@ button:hover {
 .jogo ul {
     display: flex;
     margin-bottom: 30px;
+}
+
+.inicio-placar{
+    display: flex;
+    justify-content: space-around;
+}
+.imgInicio{
+    height: 300px;
+    position:absolute;
+    left:500px;
+    top:120px;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #7AA7C7;
+    border-radius: 50%;
+    width:130px;
+    height: 120px;
+    background-color: #E1ECF4;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 7px;
+}
+.timer{
+    margin-bottom: 7px;
+}
+.erros{
+    color:red;
+    margin-top: 5px;
+}
+.acertos{
+    color:green;
+    margin-top: 5px;
 }
 
 .letras-palavra-jogo {
@@ -113,7 +152,7 @@ button:hover {
     font-weight: 400;
     font-size: 20px;
     margin-right: 10px;
-    
+
 }
 
 .chute input {
@@ -127,7 +166,7 @@ button:hover {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
-    padding-left:10px ;
+    padding-left: 10px;
 }
 
 .chute button {
@@ -137,7 +176,7 @@ button:hover {
     font-size: 16px;
     line-height: 19px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: #3C76A1;
@@ -147,7 +186,8 @@ button:hover {
     border: 1px solid #7AA7C7;
     border-radius: 3px;
 }
-.chute button:hover{
+
+.chute button:hover {
     background-color: #7AA7C7;
 }
 
