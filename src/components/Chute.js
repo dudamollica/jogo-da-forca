@@ -23,7 +23,12 @@ export default function Chute(props) {
                         props.palavra.length > 0 ? false : true
                 }>
             </input>
-            <button onClick={errouAcertou}
+            <button
+                disabled={props.textoInput != "" ? false : true ||
+                    props.palavra.length == props.acertos ? true : false ||
+                        props.palavra.length > 0 ? false : true
+                }
+                onClick={errouAcertou}
                 data-test="guess-button">Chutar</button>
         </div>
     )
